@@ -1,0 +1,11 @@
+name: ${project.name}
+version: ${project.version}
+main: farm.the.spawnerselector.SpawnerSelector
+author: Cow
+description: ${project.description}
+
+commands:
+  spawnerselector:
+    description: Get a spawner selector.
+    usage: /<command>
+    permission: spawnerselector.give

@@ -1,0 +1,67 @@
+# item: spawner selector (full list of possible items: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html)
+spawnerselector:
+  material: BLAZE_ROD
+  name: "&e&lSpawner Selector"
+  lore:
+    - "Rightclick on a spawner"
+    - "to change the mob type."
+  # chance to get a spawner selector by breaking blocks (1 in x)
+  drop-probability: 500
+  # blocks that should drop a spawner selector (full material list: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html)
+  drop-from-materials:
+    - LEAVES
+    - LEAVES_2
+# chat messages; %...% are placeholders and should stay as they are
+spawnergui:
+  title: "&2Change Spawner"
+  itemname-prefix-current-type: "&8Current type: &6"
+  itemname-prefix-new-type: "&7Set spawner to &6"
+  not-a-spawner: "&c✘ &7The block at %x%,%y%,%z% isn't a mob spawner anymore."
+  same-entitytype: "&3➽ &7The mob spawner already spawns &6%entitytype%&7."
+  success: "&a✔ &7Changed spawner type to &6%entitytype%&7."
+  no-spawner-selector: "&c✘ &7Looks like your spawner selector couldn't be found anymore..."
+# list of possible entities: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
+allowed-spawner-types:
+  - BAT
+  - BLAZE
+  - CAVE_SPIDER
+  - CHICKEN
+  - COW
+  - CREEPER
+  - DONKEY
+  - ENDERMAN
+  - ENDERMITE
+  - EVOKER
+  - GHAST
+  - GUARDIAN
+  - HORSE
+  - HUSK
+  - IRON_GOLEM
+  - LLAMA
+  - MAGMA_CUBE
+  - MULE
+  - MUSHROOM_COW
+  - OCELOT
+  - PIG
+  - PIG_ZOMBIE
+  - POLAR_BEAR
+  - RABBIT
+  - SHEEP
+  - SHULKER
+  - SILVERFISH
+  - SKELETON
+  - SKELETON_HORSE
+  - SLIME
+  - SNOWMAN
+  - SPIDER
+  - SQUID
+  - STRAY
+  - VEX
+  - VILLAGER
+  - VINDICATOR
+  - WITCH
+  - WITHER_SKELETON
+  - WOLF
+  - ZOMBIE
+  - ZOMBIE_HORSE
+  - ZOMBIE_VILLAGER
