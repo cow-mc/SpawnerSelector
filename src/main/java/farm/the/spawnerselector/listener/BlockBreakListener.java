@@ -3,6 +3,7 @@ package farm.the.spawnerselector.listener;
 import farm.the.spawnerselector.SpawnerSelector;
 import farm.the.spawnerselector.util.ConfigUtils;
 import farm.the.spawnerselector.util.ItemUtils;
+import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.SoundCategory;
 import org.bukkit.event.EventHandler;
@@ -14,7 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class BlockBreakListener implements Listener {
     @EventHandler
     public void onBlockBreak(BlockBreakEvent e) {
-        if (ConfigUtils.isSpawnerSelectorDropper(e.getBlock().getType())) {
+        if (ConfigUtils.isSpawnerSelectorDropper(e.getBlock().getType()) && e.getPlayer().getEquipment().getItemInMainHand().getType() != Material.SHEARS) {
             int RNGesus = ThreadLocalRandom.current().nextInt(SpawnerSelector.plugin.getConfig().getInt("spawnerselector.drop-probability", 500));
             // 1 in (by default) 500 chance
             if (RNGesus == 0) {
