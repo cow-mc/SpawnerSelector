@@ -2,6 +2,7 @@ package farm.the.spawnerselector;
 
 import farm.the.spawnerselector.command.GiveSpawnerSelectorCommand;
 import farm.the.spawnerselector.listener.BlockBreakListener;
+import farm.the.spawnerselector.listener.BlockDecayListener;
 import farm.the.spawnerselector.listener.SpawnerGuiListener;
 import farm.the.spawnerselector.listener.SpawnerInteractListener;
 import farm.the.spawnerselector.util.ConfigUtils;
@@ -29,6 +30,7 @@ public class SpawnerSelector extends JavaPlugin {
         getCommand("spawnerselector").setExecutor(new GiveSpawnerSelectorCommand());
 
         getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
+        getServer().getPluginManager().registerEvents(new BlockDecayListener(), this);
         getServer().getPluginManager().registerEvents(new SpawnerGuiListener(), this);
         getServer().getPluginManager().registerEvents(new SpawnerInteractListener(), this);
     }

@@ -5,8 +5,11 @@ spawnerselector:
   lore:
     - "Rightclick on a spawner"
     - "to change the mob type."
-  # chance to get a spawner selector by breaking blocks (1 in x)
-  drop-probability: 500
+  drop-probability:
+    # chance to get a spawner selector by breaking blocks (1 in x) - negative values = disabled
+    manual: 500
+    # chance to get a spawner selector when a leaf decays (1 in x) - negative values = disabled
+    leaf-decay: 20000
   # blocks that should drop a spawner selector (full material list: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html)
   drop-from-materials:
     - LEAVES
